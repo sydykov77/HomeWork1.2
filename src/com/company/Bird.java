@@ -4,22 +4,22 @@ import java.util.Random;
 
 public class Bird extends Animal {
     private int age = generateDefaultAge();
-    String Color;
+    Color  color;
 
 
 
-    public Bird(int weight, String name, int age,String Color) {
+    public Bird(int weight, String name, int age, Color Color) {
         super(weight, name);
         this.age = age;
-        this.Color= Color;
+        this.color=getColor();
     }
 
     public int getAge() {
         return age;
     }
 
-    public String getColor(com.company.Color black) {
-        return Color;
+    public Color getColor(){
+        return color;
     }
     private int generateDefaultAge() {
         Random r = new Random();
@@ -44,6 +44,6 @@ public class Bird extends Animal {
     }
 
     public String getInfo() {
-        return super.getInfo() +" Возраст:"+ age + " ||Цвет:" + Color+"||" ;
+        return super.getInfo() +" Возраст:"+ age + " ||Цвет:" + color+"||" ;
     }
 }
