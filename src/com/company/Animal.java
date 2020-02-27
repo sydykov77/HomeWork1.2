@@ -5,13 +5,14 @@ public class Animal {
     private String name;
     Habitat habitat;
 
-    public Animal(int weight, String name) {
+    public Animal(int weight, String name,Habitat habitat) {
         this.weight = weight;
         this.name = name;
+        this.getName(habitat);
 
     }
 
-    public Habitat getHabitat() {
+    public Habitat getHabitat(Habitat habitat) {
         return habitat;
     }
 
@@ -19,12 +20,13 @@ public class Animal {
         return weight;
     }
 
-    public String getName() {
+    public String getName(Habitat habitat) {
         return name;
     }
 
+
     public String getInfo() {
         return "||Вес:"+weight+"|| "+
-                "Имя:"+name+"||"+"Место обитание:"+habitat+"||";
+                "Имя:"+name+"||"+"Место обитание:"+habitat.getName()+"||";
     }
 }

@@ -4,10 +4,10 @@ public final class Eagle extends Bird {
     private int speed;
     private String home;
 
-    public Eagle(int weight, String name, int age, Color color, String home) {
-        super(weight, name, age, color);
-        this.speed = getSpeed();
-        this.home = getHome();
+    public Eagle(int weight, String name, int age, Habitat habitat, Color color, String home) {
+        super(weight, name,habitat, age, color);
+        this.speed = speed;
+        this.home = home;
 
 
     }

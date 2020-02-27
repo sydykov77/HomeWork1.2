@@ -8,10 +8,10 @@ public class Bird extends Animal {
 
 
 
-    public Bird(int weight, String name, int age, Color Color) {
-        super(weight, name);
+    public Bird(int weight, String name,Habitat habitat, int age, Color Color) {
+        super(weight, name,habitat);
         this.age = age;
-        this.color=getColor();
+        this.color=Color;
     }
 
     public int getAge() {
@@ -26,17 +26,17 @@ public class Bird extends Animal {
         return r.nextInt(100);
 
     }
-    private void makeMusic1(int age,String music){
+    public void makeMusic1(int age,String music){
         for (int i = 0; i < age; i++) {
             System.out.println(music);
 
         }
 
     }
-    private void makeMusic2(String music){
+    public void makeMusic2(String music){
         System.out.println("тю тю тю");
     }
-    private final void makeMusic3(String music,int weight){
+    public final void makeMusic3(String music,int weight){
         for (int i = 0; i <weight; i++) {
             System.out.println(music);
 
